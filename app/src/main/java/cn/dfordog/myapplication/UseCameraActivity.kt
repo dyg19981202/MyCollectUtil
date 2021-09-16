@@ -25,7 +25,7 @@ import com.luck.picture.lib.permissions.PermissionChecker
 import com.yalantis.ucrop.view.OverlayView
 import java.lang.ref.WeakReference
 
-class MainActivity2 : AppCompatActivity() {
+class UseCameraActivity : AppCompatActivity() {
 
 
     private lateinit var  mAdapter: GridImageAdapter

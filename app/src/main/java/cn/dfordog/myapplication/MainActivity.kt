@@ -1,25 +1,19 @@
 package cn.dfordog.myapplication
 
-import android.annotation.SuppressLint
 import android.app.*
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.SystemClock
 import androidx.coordinatorlayout.widget.CoordinatorLayout
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
-import com.google.android.material.snackbar.Snackbar
 import java.util.*
 import android.content.Context
-import android.graphics.BitmapFactory
-import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 
 
 class MainActivity : AppCompatActivity() {
@@ -33,7 +27,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         ll = findViewById(R.id.mainLL)
+        val progress = findViewById<Button>(R.id.progressBtn)
 
+
+        progress.setOnClickListener {
+            val dialog = ProgressDialog(this).apply {
+                setMessage("正在上传,请稍等")
+                setCanceledOnTouchOutside(false)
+                show()
+            }
+            Thread.sleep(5000)
+            dialog.dismiss()
+            val coor = findViewById<CoordinatorLayout>(R.id.ShowSnackBar)
+            Snackbar.make(coor,"testTestTestTest",Snackbar.LENGTH_LONG).show()
+
+        }
 //        val spinner = findViewById<Spinner>(R.id.planets_spinner)
 //        ArrayAdapter.createFromResource(
 //            this,
@@ -48,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
 
         ll.setOnClickListener {
-           startActivity(Intent(this,MainActivity2::class.java))
+           startActivity(Intent(this,UseCameraActivity::class.java))
         }
 
 
@@ -94,7 +102,7 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener {
 
             alarmMgr = getSystemService(Context.ALARM_SERVICE) as AlarmManager
-            alarmIntent = Intent(this, MainActivity2::class.java).let { intent ->
+            alarmIntent = Intent(this, UseCameraActivity::class.java).let { intent ->
                 PendingIntent.getActivity(this, 0, intent, 0)
             }
 

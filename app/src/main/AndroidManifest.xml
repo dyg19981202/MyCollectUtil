@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".MainActivity2"
+            android:name=".UseCameraActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
