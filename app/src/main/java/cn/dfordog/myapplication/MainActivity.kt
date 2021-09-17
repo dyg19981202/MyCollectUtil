@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         ll = findViewById(R.id.mainLL)
         val progress = findViewById<Button>(R.id.progressBtn)
 
-
         progress.setOnClickListener {
             val dialog = ProgressDialog(this).apply {
                 setMessage("正在上传,请稍等")
@@ -42,6 +41,12 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(coor,"testTestTestTest",Snackbar.LENGTH_LONG).show()
 
         }
+
+        val toSelect = findViewById<Button>(R.id.toSelectPhoto)
+        toSelect.setOnClickListener {
+            startActivity(Intent(this,SelectPhotoActivity::class.java))
+        }
+
 //        val spinner = findViewById<Spinner>(R.id.planets_spinner)
 //        ArrayAdapter.createFromResource(
 //            this,
@@ -97,32 +102,31 @@ class MainActivity : AppCompatActivity() {
 
         Log.e("nowTime: ", "$hour:$minute")
 
-        val btn = findViewById<Button>(R.id.btn)
         val coor = findViewById<CoordinatorLayout>(R.id.ShowSnackBar)
-        btn.setOnClickListener {
-
-            alarmMgr = getSystemService(Context.ALARM_SERVICE) as AlarmManager
-            alarmIntent = Intent(this, UseCameraActivity::class.java).let { intent ->
-                PendingIntent.getActivity(this, 0, intent, 0)
-            }
-
-            // Set the alarm to start at 8:30 a.m.
-            val calendar: Calendar = Calendar.getInstance().apply {
-                timeInMillis = System.currentTimeMillis()
-                set(Calendar.HOUR_OF_DAY, hour)
-                set(Calendar.MINUTE, minute)
-            }
-
-            // setRepeating() lets you specify a precise custom interval--in this case,
-            // 20 minutes.
-            alarmMgr?.setRepeating(
-                AlarmManager.RTC_WAKEUP,
-                calendar.timeInMillis,
-                1000 * 60 * 1,
-                alarmIntent
-            )
-
-        }
+//        btn.setOnClickListener {
+//
+//            alarmMgr = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+//            alarmIntent = Intent(this, UseCameraActivity::class.java).let { intent ->
+//                PendingIntent.getActivity(this, 0, intent, 0)
+//            }
+//
+//            // Set the alarm to start at 8:30 a.m.
+//            val calendar: Calendar = Calendar.getInstance().apply {
+//                timeInMillis = System.currentTimeMillis()
+//                set(Calendar.HOUR_OF_DAY, hour)
+//                set(Calendar.MINUTE, minute)
+//            }
+//
+//            // setRepeating() lets you specify a precise custom interval--in this case,
+//            // 20 minutes.
+//            alarmMgr?.setRepeating(
+//                AlarmManager.RTC_WAKEUP,
+//                calendar.timeInMillis,
+//                1000 * 60 * 1,
+//                alarmIntent
+//            )
+//
+//        }
 
     }
 
