@@ -71,7 +71,8 @@ https://blog.csdn.net/ma969070578/article/details/82863477
 如果在 `A(libray)的build.gradle` 中 已经引用了 `B(libray)` ，那么 如果再从 `B中的build引入A` 就会出现 `Circular dependency between the following tasks.` 错误
 ```
 
-
+#### 即构(解析)
+https://zhuanlan.zhihu.com/p/121107307
 
 ```xml
 api\BaseObserver
