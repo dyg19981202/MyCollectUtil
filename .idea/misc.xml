@@ -3,13 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidProjects/MyCollectUtils/basebiometric/src/main/res/layout/activity_biometric.xml" value="0.1" />
-        <entry key="..\:/AndroidProjects/MyCollectUtils/basebiometric/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/AndroidProjects/MyCollectUtils/basecommon/src/main/res/layout/activity_base.xml" value="0.19519927536231885" />
-        <entry key="..\:/AndroidProjects/MyCollectUtils/basecommon/src/main/res/layout/activity_dialog.xml" value="0.20208333333333334" />
-        <entry key="..\:/AndroidProjects/MyCollectUtils/basecommon/src/main/res/layout/dialog_loading.xml" value="0.12291666666666666" />
-        <entry key="..\:/AndroidProjects/MyCollectUtils/basedialog/src/main/res/layout/activity_dialog.xml" value="0.18489583333333334" />
-        <entry key="..\:/AndroidProjects/MyCollectUtils/basedialog/src/main/res/layout/activity_show_loading_dialog.xml" value="0.19947916666666668" />
+        <entry key="..\:/AndroidProjects/MyCollectUtil/app/src/main/res/layout/activity_main.xml" value="0.13768115942028986" />
+        <entry key="..\:/AndroidProjects/MyCollectUtil/im-ease/src/main/res/layout/activity_im.xml" value="0.12" />
+        <entry key="..\:/AndroidProjects/MyCollectUtil/im-ease/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/MyCollectUtil/im-ease/src/main/res/layout/activity_my_mqttactivity.xml" value="0.2046875" />
         <entry key="..\:/Users/dog/AndroidStudioProjects/MyApplication4/app/src/main/res/drawable/bg_pop_down.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/dog/AndroidStudioProjects/MyApplication4/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/dog/AndroidStudioProjects/MyApplication4/app/src/main/res/layout/activity_main2.xml" value="0.215625" />
