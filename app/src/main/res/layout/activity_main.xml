@@ -36,6 +36,16 @@
         android:text="ToEasy"
         />
 
+    <Button
+        android:id="@+id/toZego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toEasy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="toZego"
+        />
+
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/ShowSnackBar"

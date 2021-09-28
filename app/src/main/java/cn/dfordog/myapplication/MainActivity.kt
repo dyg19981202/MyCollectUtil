@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import cn.dfordog.basezego.ZegoActivity
 import cn.dfordog.im.ImActivity
 import com.google.android.material.snackbar.Snackbar
 
@@ -68,6 +69,11 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.toEasy).setOnClickListener {
             startActivity(Intent(this,ImActivity::class.java))
         }
+
+        findViewById<Button>(R.id.toZego).setOnClickListener {
+            startActivity(Intent(this,ZegoActivity::class.java))
+        }
+
 
     }
 
