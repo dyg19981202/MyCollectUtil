@@ -34,4 +34,8 @@ class ShowLoadingDialogActivity : BaseActivity<ActivityShowLoadingDialogBinding>
     override fun initData() {
 
     }
+
+    override fun listenClick() {
+
+    }
 }

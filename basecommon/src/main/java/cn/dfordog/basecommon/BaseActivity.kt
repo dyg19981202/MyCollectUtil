@@ -14,16 +14,24 @@ abstract class BaseActivity<T: ViewDataBinding>(private val layoutId: Int) : App
         mLoadingDialog = LoadingDialog(this,true)
         initBinding()
         initData()
+        listenClick()
     }
 
+    override fun onResume() {
+        super.onResume()
+        mLoadingDialog = LoadingDialog(this,true)
+        initBinding()
+        initData()
+        listenClick()
+    }
 
     private fun initBinding(){
         binding = DataBindingUtil.setContentView(this,layoutId)
     }
 
-//    protected abstract fun getViewId(): Int
 
     protected abstract fun initData()
+    protected abstract fun listenClick()
 
     protected fun showLoadingDialog(){
         if (!mLoadingDialog.isShowing) {

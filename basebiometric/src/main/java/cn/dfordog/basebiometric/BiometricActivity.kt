@@ -96,4 +96,8 @@ class BiometricActivity :BaseActivity<ActivityBiometricBinding>(R.layout.activit
             biometricPrompt.authenticate(promptInfo)
         }
     }
+
+    override fun listenClick() {
+        
+    }
 }
