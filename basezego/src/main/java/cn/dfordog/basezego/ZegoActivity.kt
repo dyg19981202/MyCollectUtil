@@ -9,6 +9,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import cn.dfordog.basezego.config.BuildConfig
 import cn.dfordog.basezego.config.BuildConfig.ZE_GO_APP_ID
 import cn.dfordog.basezego.config.BuildConfig.ZE_GO_APP_SIGN
 import cn.dfordog.basezego.databinding.ActivityZegoBinding
@@ -29,7 +30,6 @@ import im.zego.zegoexpress.entity.ZegoBarrageMessageInfo
 
 
 class ZegoActivity : BaseZeGoActivity<ActivityZegoBinding>(R.layout.activity_zego) {
-
 
     private var msgType = 0
 
@@ -64,4 +64,6 @@ class ZegoActivity : BaseZeGoActivity<ActivityZegoBinding>(R.layout.activity_zeg
             startActivity(Intent(this,ZegoVideoActivity::class.java))
         }
     }
+
+
 }

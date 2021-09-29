@@ -12,6 +12,8 @@ import im.zego.zegoexpress.internal.ZegoExpressEngineInternalImpl
  */
 object IZeGoVideoConfig {
 
+    var isListener = false
+
     private const val CAPTURE_HEIGHT = 640
     private const val CAPTURE_WIDTH = 360
     private const val ENCODE_HEIGHT = 640

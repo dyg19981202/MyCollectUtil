@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import cn.dfordog.baseretrofit.RetrofitActivity
 import cn.dfordog.basezego.ZegoActivity
 import cn.dfordog.im.ImActivity
 import com.google.android.material.snackbar.Snackbar
@@ -74,6 +75,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,ZegoActivity::class.java))
         }
 
+        findViewById<Button>(R.id.toRetrofit).setOnClickListener {
+            startActivity(Intent(this,RetrofitActivity::class.java))
+        }
 
     }
 

@@ -2,8 +2,10 @@ package cn.dfordog.basezego
 
 
 import android.os.Bundle
+import cn.dfordog.basezego.config.BuildConfig
 import cn.dfordog.basezego.databinding.ActivityZegoVideoBinding
-
+import im.zego.zegoexpress.ZegoExpressEngine
+import im.zego.zegoexpress.constants.ZegoScenario
 
 class ZegoVideoActivity :
     BaseZeGoActivity<ActivityZegoVideoBinding>(R.layout.activity_zego_video) {

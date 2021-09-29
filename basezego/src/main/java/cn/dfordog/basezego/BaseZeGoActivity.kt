@@ -10,9 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import cn.dfordog.basecommon.BaseActivity
 import cn.dfordog.basezego.config.BuildConfig
 import cn.dfordog.basezego.config.IZeGoVideoConfig
+import cn.dfordog.basezego.config.IZeGoVideoConfig.isListener
 import im.zego.zegoexpress.ZegoExpressEngine
 import im.zego.zegoexpress.ZegoMediaPlayer
 import im.zego.zegoexpress.callback.IZegoEventHandler
@@ -21,6 +21,7 @@ import im.zego.zegoexpress.entity.*
 import org.json.JSONObject
 import java.util.ArrayList
 
+// TODO: 2021/9/29 猜想： 音频和视频应该单独写
 abstract class BaseZeGoActivity<T: ViewDataBinding>(private val layoutID: Int): AppCompatActivity(){
 
     protected lateinit var binding: T
@@ -33,7 +34,6 @@ abstract class BaseZeGoActivity<T: ViewDataBinding>(private val layoutID: Int): 
     private val roomID = "room1"
     private var msgType = 0
     private var userID = ""
-    private var isListener = false
 
     private fun initBinding(){
         binding = DataBindingUtil.setContentView(this,layoutID)
@@ -47,6 +47,7 @@ abstract class BaseZeGoActivity<T: ViewDataBinding>(private val layoutID: Int): 
         initBinding()
         initEngineAndUser()
         getVoicePermission()
+        requestPermission()
         if(!isListener){
             listenerRoom()
         }
@@ -67,10 +68,6 @@ abstract class BaseZeGoActivity<T: ViewDataBinding>(private val layoutID: Int): 
 
     }
 
-    override fun onPause() {
-        super.onPause()
-        ZegoExpressEngine.destroyEngine(null)
-    }
 
     /**
      * 获取音频权限
@@ -136,7 +133,7 @@ abstract class BaseZeGoActivity<T: ViewDataBinding>(private val layoutID: Int): 
     /**
      * 退出房间
      */
-    protected fun logoutRoom(){
+    private fun logoutRoom(){
         engine.logoutRoom(roomID)
     }
 

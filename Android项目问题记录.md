@@ -74,6 +74,14 @@ https://blog.csdn.net/ma969070578/article/details/82863477
 #### 即构(解析)
 https://zhuanlan.zhihu.com/p/121107307
 
+
+#### Kotlin 内联函数使用
+```xml
+    参考类 BaseRepository
+    代码示例如下:
+        private inline fun <reified T> api(): T = RetrofitUtil.getInstance().create(T::class.java)
+```
+
 ```xml
 api\BaseObserver
 http\BaseObserver
