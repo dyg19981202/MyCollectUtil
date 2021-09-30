@@ -1,10 +1,17 @@
 package cn.dfordog.baseretrofit.service
 
-import retrofit2.http.POST
+import cn.dfordog.baseretrofit.config.KeyConfig.WEATHER_KEY
+import cn.dfordog.baseretrofit.pojo.Weather
+import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface Api {
 
-    @POST("")
-    suspend fun hello(): String
+    @GET("simpleWeather/query")
+    suspend fun weather(
+        @Query("city") city:String,
+        @Query("key") key: String = WEATHER_KEY
+    ): Weather
+
 
 }

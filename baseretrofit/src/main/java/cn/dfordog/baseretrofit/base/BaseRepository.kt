@@ -2,10 +2,8 @@ package cn.dfordog.baseretrofit.base
 
 import cn.dfordog.baseretrofit.utils.RetrofitUtil
 
-open class BaseRepository<T>(api: Class<T>){
+open class BaseRepository{
 
-    private val apiServer = api
-
-    fun api() = RetrofitUtil.getInstance().create(apiServer)
+    fun <T> api(api: Class<T>):T = RetrofitUtil.getInstance().create(api)
 
 }

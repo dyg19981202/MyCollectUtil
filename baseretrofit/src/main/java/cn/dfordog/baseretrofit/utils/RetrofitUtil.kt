@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 
 object RetrofitUtil {
 
-    const val BASE_URL = ""
+    private const val BASE_URL = "http://apis.juhe.cn"
 
     private val retrofit by lazy {
 
@@ -28,5 +28,5 @@ object RetrofitUtil {
     /**
      * 返回创建的Retrofit
      */
-    fun getInstance() = retrofit
+    fun getInstance(): Retrofit = retrofit
 }

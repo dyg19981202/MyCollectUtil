@@ -3,17 +3,23 @@ package cn.dfordog.baseretrofit.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import cn.dfordog.baseretrofit.base.BaseViewModel
+import cn.dfordog.baseretrofit.pojo.Weather
 import cn.dfordog.baseretrofit.repository.ApiRepository
 
 class LoginViewModel : BaseViewModel() {
 
-    private val _str = MutableLiveData<String>()
+    private val _weather = MutableLiveData<Weather>()
+    var city = ""
 
-    suspend fun hello(): LiveData<String>{
-        ApiRepository.hello{
-            _str.postValue(it)
+    /**
+     * 获取天气
+     */
+    suspend fun weather(): LiveData<Weather>{
+        ApiRepository.weather(city){
+            _weather.postValue(it)
         }
-        return _str
+        return _weather
     }
+
 
 }

@@ -90,4 +90,21 @@ http\BaseObserver
 下麦接口:/api/room/returnPit
 许愿池接口:/api/tree/index
 ```
+#### 需要添加 分页功能
 
+
+#### 添加 ToastUtil 错误
+```xml
+    Build was configured to prefer settings repositories over project repositories but repository ...
+    https://blog.csdn.net/hpp_1225/article/details/119888981
+```
+
+#### Retrofit异步请求多个接口
+```java
+    val a = lifecycleScope.async { getDataA() }
+    val b = lifecycleScope.async { getDataB() }
+```
+https://blog.csdn.net/yu540135101/article/details/113246177
+
+#### 常用的正则表达式
+https://www.cnblogs.com/xuqiang7/p/11082729.html
