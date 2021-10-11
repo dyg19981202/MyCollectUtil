@@ -140,7 +140,7 @@ public class GridImageAdapter extends
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
         //少于MaxSize张，显示继续添加的图标
         if (getItemViewType(position) == TYPE_CAMERA) {
-            viewHolder.mImg.setImageResource(R.drawable.ic_add_image);
+            viewHolder.mImg.setImageResource(R.drawable.my_add);
             viewHolder.mImg.setOnClickListener(v -> mOnAddPicClickListener.onAddPicClick());
             viewHolder.mIvDel.setVisibility(View.INVISIBLE);
         } else {

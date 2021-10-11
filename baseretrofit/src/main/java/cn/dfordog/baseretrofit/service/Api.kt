@@ -1,6 +1,6 @@
 package cn.dfordog.baseretrofit.service
 
-import cn.dfordog.baseretrofit.config.KeyConfig.WEATHER_KEY
+import cn.dfordog.baseretrofit.config.ConstConfig.WEATHER_KEY
 import cn.dfordog.baseretrofit.pojo.Weather
 import retrofit2.http.GET
 import retrofit2.http.Query

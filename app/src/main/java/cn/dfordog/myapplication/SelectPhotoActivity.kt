@@ -4,7 +4,9 @@ package cn.dfordog.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Parcelable
+import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import cn.dfordog.myapplication.adapter.GridImageAdapter
 import cn.dfordog.myapplication.utils.SelectPhotoUtil
@@ -24,11 +26,17 @@ class SelectPhotoActivity : AppCompatActivity() {
             mAdapter.setList(savedInstanceState.getParcelableArrayList("selectorList"))
         }
 
+
+        findViewById<ImageView>(R.id.add).setOnClickListener {
+            SelectPhotoUtil.selectPhoto(this,chooseMode,mAdapter)
+        }
+
         val mRecyclerView = findViewById<RecyclerView>(R.id.selectPhoto)
         val manager = FullyGridLayoutManager(
             this,
-            4, GridLayoutManager.VERTICAL, false
+            1, GridLayoutManager.VERTICAL, false
         )
+//        val manager = LinearLayoutManager(this)
         mRecyclerView.layoutManager = manager
         mRecyclerView.adapter = mAdapter
 

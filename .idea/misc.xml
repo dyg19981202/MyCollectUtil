@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/MyCollectUtil/app/src/main/res/drawable/shape_add_photo.xml" value="0.2598958333333333" />
         <entry key="..\:/AndroidProjects/MyCollectUtil/app/src/main/res/layout/activity_main.xml" value="0.13768115942028986" />
+        <entry key="..\:/AndroidProjects/MyCollectUtil/app/src/main/res/layout/activity_select_photo.xml" value="0.24375" />
+        <entry key="..\:/AndroidProjects/MyCollectUtil/app/src/main/res/layout/gv_filter_image.xml" value="0.24375" />
         <entry key="..\:/AndroidProjects/MyCollectUtil/baseretrofit/src/main/res/layout/activity_retrofit.xml" value="0.17831813576494426" />
         <entry key="..\:/AndroidProjects/MyCollectUtil/baseretrofit/src/main/res/layout/login_fragment.xml" value="0.2" />
         <entry key="..\:/AndroidProjects/MyCollectUtil/basezego/src/main/res/layout/activity_zego.xml" value="0.25" />

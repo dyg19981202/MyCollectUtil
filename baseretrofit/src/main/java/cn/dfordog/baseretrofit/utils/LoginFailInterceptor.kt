@@ -37,7 +37,7 @@ class LoginFailInterceptor : Interceptor {
                 UTF8
             val json = buffer.clone().readString(charset)
             val jsObj= JSONObject(json)
-            if (jsObj.optInt("code") == 10000) {
+            if (jsObj.optInt("error_code") == 0) {
                 if (encodedPath != curRequestUrl) {
                     loginOutCallback()
                     requestNumber = 1
