@@ -6,8 +6,18 @@
     app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/loginFragment"
-        android:name="cn.dfordog.baseretrofit.ui.LoginFragment"
+        android:name="cn.dfordog.baseretrofit.ui.login.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/login_fragment"
+        >
+        <action
+            android:id="@+id/action_loginFragment_to_requestPermissionFragment"
+            app:destination="@id/requestPermissionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestPermissionFragment"
+        android:name="cn.dfordog.baseretrofit.ui.other.RequestPermissionFragment"
+        android:label="RequestPermissionFragment"
+        tools:layout="@layout/request_permission_fragment"
         />
 </navigation>

@@ -1,4 +1,4 @@
-package cn.dfordog.baseretrofit.ui
+package cn.dfordog.baseretrofit.ui.login
 
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -9,10 +9,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import cn.dfordog.baseretrofit.R
 import cn.dfordog.baseretrofit.databinding.LoginFragmentBinding
 import cn.dfordog.baseretrofit.utils.RegexUtil
@@ -60,16 +60,18 @@ class LoginFragment : Fragment() {
         }
 
         binding.goLogin.setOnClickListener {
-            viewModel.city = "临沂"
-            lifecycleScope.launch(Dispatchers.Main){
-                viewModel.weather().observe(viewLifecycleOwner){
-                    if(it.error_code == 0){
-                        Log.e("获取天气",it.toString())
-                    }else{
-                        ToastUtils.show("错误信息: ${it.reason}")
-                    }
-                }
-            }
+//            viewModel.city = "临沂"
+//            lifecycleScope.launch(Dispatchers.Main){
+//                viewModel.weather().observe(viewLifecycleOwner){
+//                    if(it.error_code == 0){
+//                        Log.e("获取天气",it.toString())
+//                    }else{
+//                        ToastUtils.show("错误信息: ${it.reason}")
+//                    }
+//                }
+//            }
+            findNavController().navigate(R.id.action_loginFragment_to_requestPermissionFragment)
+
         }
     }
 

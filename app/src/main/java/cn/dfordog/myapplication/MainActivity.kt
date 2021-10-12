@@ -79,6 +79,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,RetrofitActivity::class.java))
         }
 
+        findViewById<Button>(R.id.toViewPager).setOnClickListener {
+            startActivity(Intent(this,ViewPager2Activity::class.java))
+        }
+
     }
 
 
