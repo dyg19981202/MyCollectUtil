@@ -1,15 +1,6 @@
 package cn.dfordog.baseretrofit.ui.other
 
 import android.Manifest
-import android.content.pm.PackageManager
-import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelStoreOwner
 import cn.dfordog.baseretrofit.R
 import cn.dfordog.baseretrofit.base.BaseFragment
@@ -31,10 +22,14 @@ class RequestPermissionFragment :
     override fun listenClick() {
 
         binding.requestBtn.setOnClickListener {
-            startPermissionLaunch(arrayOf(
-                Manifest.permission.CAMERA,
-                Manifest.permission.READ_EXTERNAL_STORAGE,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE))
+//            startPermissionLaunch(arrayOf(
+//                Manifest.permission.CAMERA,
+//                Manifest.permission.READ_EXTERNAL_STORAGE,
+//                Manifest.permission.WRITE_EXTERNAL_STORAGE))
+
+
+//            fragmentManager?.beginTransaction()?.add(R.id.showDialog,SelectSexDialog())?.commit()
+            fragmentManager?.let { it1 -> SelectSexDialog().show(it1,"aaaa") }
         }
 
     }

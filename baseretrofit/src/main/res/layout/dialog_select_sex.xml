@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/white"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="11dp"
+                />
+
+            <TextView
+                android:id="@+id/selectSexConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                android:textColor="#18191F"
+                android:textSize="11sp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="9dp"
+                android:background="@drawable/shape_select_sex_confirm_bg"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="51dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="9dp"
+                android:layout_marginEnd="9dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="18dp"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/selectSexMale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="靓仔"
+                    android:textColor="#969BAB"
+                    android:textSize="15sp"
+                    android:paddingTop="22dp"
+                    android:paddingBottom="22dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/selectSexSecret"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="不告诉你"
+                    android:textColor="#969BAB"
+                    android:textSize="15sp"
+                    android:paddingTop="22dp"
+                    android:paddingBottom="22dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/selectSexFemale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="小姐姐"
+                    android:textColor="#969BAB"
+                    android:textSize="15sp"
+                    android:paddingTop="22dp"
+                    android:paddingBottom="22dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
