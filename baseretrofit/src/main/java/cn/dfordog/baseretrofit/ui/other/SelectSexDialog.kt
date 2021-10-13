@@ -25,7 +25,7 @@ class SelectSexDialog : DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate<DialogSelectSexBinding>(inflater,R.layout.dialog_select_sex,container,false)
+        binding = DataBindingUtil.inflate(inflater,R.layout.dialog_select_sex,container,false)
         return binding.root
     }
 
@@ -39,7 +39,7 @@ class SelectSexDialog : DialogFragment() {
         window?.attributes?.width = dip2px(requireContext(),339F)
         window?.attributes?.height = dip2px(requireContext(),255F)
         //设置window位置
-        window?.attributes?.gravity = Gravity.BOTTOM//居中
+        window?.attributes?.gravity = Gravity.BOTTOM//底部
 
         binding.selectSexMale.setOnClickListener {
             binding.selectSexMale.setBackgroundResource(R.drawable.shape_selected_sex_bg)

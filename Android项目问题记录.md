@@ -267,3 +267,12 @@ public class MainAdapter extends RecyclerView.Adapter {
      override fun setStatusFontColor(): Boolean = true
 
 ```
+
+
+#### TabLayout 相关问题
+```xml
+    可以通过
+    app:tabIndicator="@drawable/shape_tab_indicator" //指定 tab 指示器的样式
+    app:tabIndicatorFullWidth="false" //设置指示器不铺满
+    app:tabIndicatorHeight="3dp"  //指定高度
+```
