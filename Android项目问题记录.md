@@ -276,3 +276,22 @@ public class MainAdapter extends RecyclerView.Adapter {
     app:tabIndicatorFullWidth="false" //设置指示器不铺满
     app:tabIndicatorHeight="3dp"  //指定高度
 ```
+
+#### 瀑布流
+```java
+            /**
+             * 计算ImageView宽高 实现瀑布流效果
+             */
+            val width = itemDynamicShopIv.layoutParams.width / 3
+            val height = (200 + Math.random() * 400).toInt()
+
+            itemDynamicShopIv.layoutParams.height = height
+
+```
+
+#### Android Gradle plugin requires Java 11 to run. You are currently using Java 1.8.
+
+```xml
+https://juejin.cn/post/6948967511400382501
+```
+

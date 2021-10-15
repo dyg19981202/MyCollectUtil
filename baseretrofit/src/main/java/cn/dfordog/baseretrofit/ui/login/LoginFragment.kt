@@ -1,5 +1,6 @@
 package cn.dfordog.baseretrofit.ui.login
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import androidx.lifecycle.ViewModelProvider
@@ -15,6 +16,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import cn.dfordog.baseretrofit.R
 import cn.dfordog.baseretrofit.databinding.LoginFragmentBinding
+import cn.dfordog.baseretrofit.ui.CircleDelActivity
 import cn.dfordog.baseretrofit.utils.RegexUtil
 import cn.dfordog.baseretrofit.utils.RegexUtil.REGEX_TYPE_WORD_NUM
 import cn.dfordog.baseretrofit.viewmodel.LoginViewModel
@@ -70,7 +72,9 @@ class LoginFragment : Fragment() {
 //                    }
 //                }
 //            }
-            findNavController().navigate(R.id.action_loginFragment_to_requestPermissionFragment)
+//            findNavController().navigate(R.id.action_loginFragment_to_requestPermissionFragment)
+
+            startActivity(Intent(requireContext(),CircleDelActivity::class.java))
 
         }
     }

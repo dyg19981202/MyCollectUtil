@@ -10,9 +10,13 @@
         <entry key="..\:/AndroidProjects/MyCollectUtil/app/src/main/res/layout/activity_view_pager2.xml" value="0.1921875" />
         <entry key="..\:/AndroidProjects/MyCollectUtil/app/src/main/res/layout/fragment_tab.xml" value="0.1921875" />
         <entry key="..\:/AndroidProjects/MyCollectUtil/app/src/main/res/layout/gv_filter_image.xml" value="0.24375" />
+        <entry key="..\:/AndroidProjects/MyCollectUtil/baseretrofit/src/main/res/drawable/shape_line.xml" value="0.2526041666666667" />
+        <entry key="..\:/AndroidProjects/MyCollectUtil/baseretrofit/src/main/res/layout/activity_circle_del.xml" value="0.23645833333333333" />
         <entry key="..\:/AndroidProjects/MyCollectUtil/baseretrofit/src/main/res/layout/activity_retrofit.xml" value="0.17831813576494426" />
         <entry key="..\:/AndroidProjects/MyCollectUtil/baseretrofit/src/main/res/layout/dialog_select_sex.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidProjects/MyCollectUtil/baseretrofit/src/main/res/layout/item_search.xml" value="0.23645833333333333" />
         <entry key="..\:/AndroidProjects/MyCollectUtil/baseretrofit/src/main/res/layout/login_fragment.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/MyCollectUtil/baseretrofit/src/main/res/layout/newest_fragment.xml" value="0.23645833333333333" />
         <entry key="..\:/AndroidProjects/MyCollectUtil/baseretrofit/src/main/res/layout/request_permission_fragment.xml" value="0.23072916666666668" />
         <entry key="..\:/AndroidProjects/MyCollectUtil/basezego/src/main/res/layout/activity_zego.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/MyCollectUtil/basezego/src/main/res/layout/activity_zego_video.xml" value="0.2" />
