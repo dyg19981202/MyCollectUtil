@@ -4,6 +4,6 @@ import cn.dfordog.baseretrofit.utils.RetrofitUtil
 
 open class BaseRepository{
 
-    fun <T> api(api: Class<T>):T = RetrofitUtil.getInstance().create(api)
+    protected fun <T> api(api: Class<T>):T = RetrofitUtil.getInstance().create(api)
 
 }

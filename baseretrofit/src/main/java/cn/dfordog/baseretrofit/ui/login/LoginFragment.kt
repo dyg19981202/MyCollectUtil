@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
@@ -17,6 +18,7 @@ import androidx.navigation.fragment.findNavController
 import cn.dfordog.baseretrofit.R
 import cn.dfordog.baseretrofit.databinding.LoginFragmentBinding
 import cn.dfordog.baseretrofit.ui.CircleDelActivity
+import cn.dfordog.baseretrofit.utils.LogUtils
 import cn.dfordog.baseretrofit.utils.RegexUtil
 import cn.dfordog.baseretrofit.utils.RegexUtil.REGEX_TYPE_WORD_NUM
 import cn.dfordog.baseretrofit.viewmodel.LoginViewModel
@@ -44,6 +46,22 @@ class LoginFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+
+        viewModel.getWeather().observe(viewLifecycleOwner,{
+            lifecycleScope.launch(Dispatchers.IO){
+                Log.e("LoginFragment: ",it.msg + "," + it.data.toString())
+            }
+        })
+
+
+//        lifecycleScope.launch(Dispatchers.Main){
+//            viewModel.weather().observe(viewLifecycleOwner,{
+//                Log.e("LoginFragment: ",it.reason)
+//                if(it.error_code == 0){
+//                    LogUtils.e(it.result)
+//                }
+//            })
+//        }
 
         binding.realInputUsername.addTextChangedListener {
             when {

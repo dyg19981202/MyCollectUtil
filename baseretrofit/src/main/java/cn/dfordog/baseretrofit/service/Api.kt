@@ -1,6 +1,7 @@
 package cn.dfordog.baseretrofit.service
 
 import cn.dfordog.baseretrofit.config.ConstConfig.WEATHER_KEY
+import cn.dfordog.baseretrofit.pojo.BasePojo
 import cn.dfordog.baseretrofit.pojo.Weather
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -12,6 +13,5 @@ interface Api {
         @Query("city") city:String,
         @Query("key") key: String = WEATHER_KEY
     ): Weather
-
 
 }

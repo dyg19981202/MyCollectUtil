@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitUtil {
 
-    private const val BASE_URL = "http://apis.juhe.cn"
+    private const val BASE_URL = "http://apis.juhe.cn1"
 
     private val retrofit by lazy {
 

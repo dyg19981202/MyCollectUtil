@@ -295,3 +295,41 @@ public class MainAdapter extends RecyclerView.Adapter {
 https://juejin.cn/post/6948967511400382501
 ```
 
+#### OkGo 使用
+
+```java
+OkGo.post<BaseResponse<UserInfoBean>>(UrlUtils.register)
+            .tag(mRootView)
+            .params("mobile", mobile)
+            .params("code", code)
+            .params("friend_code", friend_code)
+            .execute(object : JsonCallback<BaseResponse<UserInfoBean>>(mContext, false) {
+                override fun onSuccess(success: BaseResponse<UserInfoBean>?) {
+                    success?.data?.let { mRootView?.onRegisterSuccess(it) }
+                }
+
+            })
+```
+
+#### 添加TextView 展开收起功能
+
+```java
+mineShowIntroduction.viewTreeObserver
+            .addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
+                override fun onPreDraw(): Boolean {
+                    //这个回调会调用多次，获取完行数记得注销监听
+                    mineShowIntroduction.viewTreeObserver.removeOnPreDrawListener(this)
+                    introduction = mineShowIntroduction.lineCount
+                    if(mineShowIntroduction.lineCount > 2){
+                        mineShowIntroduction.setLines(2)
+                        mineShowIntroduction.ellipsize = TextUtils.TruncateAt.END
+                        mineShowMore.visibility = View.VISIBLE
+                    }
+                    return false
+                }
+            })
+```
+#### git相关操作
+```xml
+https://www.cnblogs.com/zhujiabin/p/8715701.html
+```

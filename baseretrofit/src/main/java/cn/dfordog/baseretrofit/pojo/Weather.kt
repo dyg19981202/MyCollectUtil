@@ -3,13 +3,13 @@ package cn.dfordog.baseretrofit.pojo
 data class Weather(
     val error_code: Int,
     val reason: String,
-    val result: Result
+    val result: Result?
 )
 
 data class Result(
     val city: String,
     val future: List<Future>,
-    val realtime: Realtime
+    val realtime: Realtime?
 )
 
 data class Future(
