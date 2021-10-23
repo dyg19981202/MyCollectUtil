@@ -17,11 +17,12 @@
             <option value="$PROJECT_DIR$/baseretrofit" />
             <option value="$PROJECT_DIR$/basezego" />
             <option value="$PROJECT_DIR$/im-ease" />
+            <option value="$PROJECT_DIR$/qrcode" />
+            <option value="$PROJECT_DIR$/zxing" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
-    <option name="offlineMode" value="true" />
   </component>
 </project>

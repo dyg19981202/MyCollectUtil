@@ -307,7 +307,6 @@ OkGo.post<BaseResponse<UserInfoBean>>(UrlUtils.register)
                 override fun onSuccess(success: BaseResponse<UserInfoBean>?) {
                     success?.data?.let { mRootView?.onRegisterSuccess(it) }
                 }
-
             })
 ```
 
@@ -332,4 +331,10 @@ mineShowIntroduction.viewTreeObserver
 #### git相关操作
 ```xml
 https://www.cnblogs.com/zhujiabin/p/8715701.html
+```
+#### LinearLayoutManager()
+```java
+    //若最后一个参数设置为false 则 第一个添加的item 在列表最上方 新添加的item需要滑下去才能看到
+    //若最后一个参数设置为true  则 第一个添加的item 在列表最下方 新添加的item需要滑上去才能看到
+    layoutManager =new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
 ```
